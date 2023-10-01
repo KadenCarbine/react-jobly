@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Homepage from "../Home";
+import Home from "../Home";
 import CompanyList from "../companies/CompanyList";
 import JobList from "../jobs/JobList";
 import CompanyDetail from "../companies/CompanyDetail";
@@ -28,33 +28,32 @@ function allRoutes({ login, signup }) {
       <div className="pt-5">
         <Routes>
 
-          <Route exact path="/">
-            <Homepage />
+          <Route exact path="/" element={<Home />}>
+      
           </Route>
 
-          <Route exact path="/login">
-            <LoginForm login={login} />
+          <Route exact path="/login" element={<LoginForm login={login} />}>
           </Route>
 
-          <Route exact path="/signup">
-            <SignupForm signup={signup} />
+          <Route exact path="/signup" element={<SignupForm signup={signup} />}>
+            
           </Route>
 
-          <PrivateRoute exact path="/companies">
-            <CompanyList />
-          </PrivateRoute>
+          <Route exact path="/companies" element={<CompanyList />}>
+            
+          </Route>
 
-          <PrivateRoute exact path="/jobs">
-            <JobList />
-          </PrivateRoute>
+          <Route exact path="/jobs" element={<JobList />}>
+            
+          </Route>
 
-          <PrivateRoute exact path="/companies/:handle">
-            <CompanyDetail />
-          </PrivateRoute>
+          <Route exact path="/companies/:handle" element={<CompanyDetail />}>
+            
+          </Route>
 
-          <PrivateRoute path="/profile">
-            <ProfileForm />
-          </PrivateRoute>
+          <Route path="/profile" element={<ProfileForm />}>
+            
+          </Route>
 
         </Routes>
       </div>

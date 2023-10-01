@@ -1,9 +1,38 @@
-.Navigation {
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
   background-color: white;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.125);
+  position: top;
+  top: 0;
+  width: 100%;
+  border-bottom: 2px solid #bbb;
 }
 
-.nav-link.active {
-  font-weight: bold;
-  color: black;
+li {
+  float: right;
+  margin-right: 1rem;
+  font-weight: 500;
+}
+
+li a {
+  display: block;
+  color: #1888de;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #1888de;
+  color: white;
+  border-radius: 3px;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+.NavBar-Jobly {
+  float: left;
 }
