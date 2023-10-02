@@ -82,7 +82,7 @@ function App() {
     async function getCurrentUser() {
       if (token) {
         try {
-          let { username } = jwt.decode(token);
+          let { username } = "test";
           // put the token on the Api class so it can use it to call the API.
           JoblyApi.token = token;
           let currentUser = await JoblyApi.getCurrentUser(username);
